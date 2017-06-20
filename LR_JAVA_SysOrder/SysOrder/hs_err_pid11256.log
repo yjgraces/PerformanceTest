@@ -1,0 +1,266 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x32a61490, pid=11256, tid=10840
+#
+# JRE version: 6.0_45-b06
+# Java VM: Java HotSpot(TM) Client VM (20.45-b01 mixed mode windows-x86 )
+# Problematic frame:
+# C  0x32a61490
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x031fa000):  JavaThread "main" [_thread_in_native, id=10840, stack(0x00090000,0x00190000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000000
+
+Registers:
+EAX=0x00000000, EBX=0x031fa128, ECX=0x73094c58, EDX=0x00000001
+ESP=0x0018d2cc, EBP=0x00000000, ESI=0x021e1348, EDI=0x031fa000
+EIP=0x32a61490, EFLAGS=0x00010206
+
+Top of Stack: (sp=0x0018d2cc)
+0x0018d2cc:   031fa000 15656cc8 0018d30c 15656cc8
+0x0018d2dc:   03449fc7 031fa128 0018d314 0018d31c
+0x0018d2ec:   0018d2ec 15656cc8 0018d31c 156703c8
+0x0018d2fc:   00000000 15656cc8 00000000 0018d31c
+0x0018d30c:   0018d348 03442f87 1565b380 03448306
+0x0018d31c:   1569edd8 05515668 055153f8 0018d328
+0x0018d32c:   1569d882 0018d350 1569eab0 00000000
+0x0018d33c:   1569d920 0018d31c 0018d350 0018d370 
+
+Instructions: (pc=0x32a61490)
+0x32a61470:   ff ff 83 c4 04 8b f0 56 e8 8d 0b 00 00 56 8b e8
+0x32a61480:   ff 15 20 31 a6 32 8b c5 83 c4 04 8d 50 01 8b ff
+0x32a61490:   8a 08 83 c0 01 84 c9 75 f7 2b c2 8d 78 01 55 e8
+0x32a614a0:   5c fb ff ff 83 c4 04 8b f0 8d 50 02 8d 64 24 00 
+
+
+Register to memory mapping:
+
+EAX=0x00000000 is an unknown value
+EBX=0x031fa128 is an unknown value
+ECX=0x73094c58 is an unknown value
+EDX=0x00000001 is an unknown value
+ESP=0x0018d2cc is pointing into the stack for thread: 0x031fa000
+EBP=0x00000000 is an unknown value
+ESI=0x021e1348 is an unknown value
+EDI=0x031fa000 is a thread
+
+
+Stack: [0x00090000,0x00190000],  sp=0x0018d2cc,  free space=1012k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x32a61490  Java_lrapi_lr_eval_1string+0x30
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  lrapi.lr.eval_string(Ljava/lang/String;)Ljava/lang/String;+0
+j  Actions.<init>()V+114
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeConstructorAccessorImpl.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+72
+j  sun.reflect.DelegatingConstructorAccessorImpl.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+5
+j  java.lang.reflect.Constructor.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+92
+j  java.lang.Class.newInstance0()Ljava/lang/Object;+118
+j  java.lang.Class.newInstance()Ljava/lang/Object;+16
+j  DummyClassLoader.getScriptObject(Ljava/lang/String;)Ljava/lang/Object;+35
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x03106400 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=11884, stack(0x1bde0000,0x1bee0000)]
+  0x030ff800 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=11360, stack(0x1bbf0000,0x1bcf0000)]
+  0x030fe800 JavaThread "Attach Listener" daemon [_thread_blocked, id=12100, stack(0x1baf0000,0x1bbf0000)]
+  0x030fb400 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=10880, stack(0x1b9f0000,0x1baf0000)]
+  0x030eac00 JavaThread "Finalizer" daemon [_thread_blocked, id=10040, stack(0x1b570000,0x1b670000)]
+  0x030e9800 JavaThread "Reference Handler" daemon [_thread_blocked, id=11428, stack(0x1b380000,0x1b480000)]
+=>0x031fa000 JavaThread "main" [_thread_in_native, id=10840, stack(0x00090000,0x00190000)]
+
+Other Threads:
+  0x030e5c00 VMThread [stack: 0x1b240000,0x1b340000] [id=9608]
+  0x0313bc00 WatcherThread [stack: 0x1bf60000,0x1c060000] [id=9988]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4928K, used 876K [0x05440000, 0x05990000, 0x0a990000)
+  eden space 4416K,  19% used [0x05440000, 0x0551b1a8, 0x05890000)
+  from space 512K,   0% used [0x05890000, 0x05890000, 0x05910000)
+  to   space 512K,   0% used [0x05910000, 0x05910000, 0x05990000)
+ tenured generation   total 10944K, used 0K [0x0a990000, 0x0b440000, 0x15440000)
+   the space 10944K,   0% used [0x0a990000, 0x0a990000, 0x0a990200, 0x0b440000)
+ compacting perm gen  total 12288K, used 2427K [0x15440000, 0x16040000, 0x19440000)
+   the space 12288K,  19% used [0x15440000, 0x1569ee08, 0x1569f000, 0x16040000)
+No shared spaces configured.
+
+Code Cache  [0x03440000, 0x034b8000, 0x05440000)
+ total_blobs=151 nmethods=19 adapters=69 free_code_cache=33074560 largest_free_block=0
+
+Dynamic libraries:
+0x00400000 - 0x00408000 	C:\Program Files (x86)\HP\LoadRunner\bin\mdrv.exe
+0x77540000 - 0x776c0000 	C:\Windows\SysWOW64\ntdll.dll
+0x76fd0000 - 0x770e0000 	C:\Windows\syswow64\kernel32.dll
+0x76540000 - 0x76587000 	C:\Windows\syswow64\KERNELBASE.dll
+0x3cdb0000 - 0x3cdfc000 	C:\Program Files (x86)\HP\LoadRunner\bin\driver.dll
+0x752a0000 - 0x753a0000 	C:\Windows\syswow64\USER32.dll
+0x76f40000 - 0x76fd0000 	C:\Windows\syswow64\GDI32.dll
+0x76460000 - 0x7646a000 	C:\Windows\syswow64\LPK.dll
+0x762f0000 - 0x7638d000 	C:\Windows\syswow64\USP10.dll
+0x76490000 - 0x7653c000 	C:\Windows\syswow64\msvcrt.dll
+0x76770000 - 0x76810000 	C:\Windows\syswow64\ADVAPI32.dll
+0x76470000 - 0x76489000 	C:\Windows\SysWOW64\sechost.dll
+0x76840000 - 0x76930000 	C:\Windows\syswow64\RPCRT4.dll
+0x750a0000 - 0x75100000 	C:\Windows\syswow64\SspiCli.dll
+0x75090000 - 0x7509c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x32be0000 - 0x32beb000 	C:\Program Files (x86)\HP\LoadRunner\bin\lr_exp.dll
+0x73090000 - 0x7312b000 	C:\Windows\WinSxS\x86_microsoft.vc80.crt_1fc8b3b9a1e18e3b_8.0.50727.4940_none_d08cc06a442b34fc\MSVCR80.dll
+0x30000000 - 0x3002f000 	C:\Program Files (x86)\HP\LoadRunner\bin\mosifs32.dll
+0x2ac40000 - 0x2ac4d000 	C:\Program Files (x86)\HP\LoadRunner\bin\thrdutil.dll
+0x304c0000 - 0x304da000 	C:\Program Files (x86)\HP\LoadRunner\bin\mmalloc_logic.dll
+0x3d850000 - 0x3d856000 	C:\Program Files (x86)\HP\LoadRunner\bin\CrtInitiator.dll
+0x3d840000 - 0x3d846000 	C:\Program Files (x86)\HP\LoadRunner\bin\CrtLoader_VS6.dll
+0x3d820000 - 0x3d826000 	C:\Program Files (x86)\HP\LoadRunner\bin\CrtLoader_VS8_0_50727_1433.dll
+0x3d810000 - 0x3d816000 	C:\Program Files (x86)\HP\LoadRunner\bin\CrtLoader_VS9_0_21022_8.dll
+0x73830000 - 0x738d3000 	C:\Windows\WinSxS\x86_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.4940_none_50916076bcb9a742\MSVCR90.dll
+0x753a0000 - 0x75fea000 	C:\Windows\syswow64\SHELL32.dll
+0x76400000 - 0x76457000 	C:\Windows\syswow64\SHLWAPI.dll
+0x3d360000 - 0x3d370000 	C:\Program Files (x86)\HP\LoadRunner\bin\cyclic_ds.dll
+0x330e0000 - 0x330f5000 	C:\Program Files (x86)\HP\LoadRunner\bin\libxdrutil.dll
+0x284c0000 - 0x284ca000 	C:\Program Files (x86)\HP\LoadRunner\bin\xdr.dll
+0x30650000 - 0x3065b000 	C:\Program Files (x86)\HP\LoadRunner\bin\MLIB_DS.dll
+0x33210000 - 0x3321d000 	C:\Program Files (x86)\HP\LoadRunner\bin\libmemmap.dll
+0x33180000 - 0x3319d000 	C:\Program Files (x86)\HP\LoadRunner\bin\libresponse.dll
+0x75100000 - 0x75135000 	C:\Windows\syswow64\WS2_32.dll
+0x763e0000 - 0x763e6000 	C:\Windows\syswow64\NSI.dll
+0x2b2f0000 - 0x2b2f8000 	C:\Program Files (x86)\HP\LoadRunner\bin\std-vc-mt.dll
+0x73000000 - 0x73087000 	C:\Windows\WinSxS\x86_microsoft.vc80.crt_1fc8b3b9a1e18e3b_8.0.50727.4940_none_d08cc06a442b34fc\MSVCP80.dll
+0x31370000 - 0x313b1000 	C:\Program Files (x86)\HP\LoadRunner\bin\mchan.dll
+0x40a70000 - 0x40a88000 	C:\Program Files (x86)\HP\LoadRunner\bin\config.dll
+0x31290000 - 0x3129a000 	C:\Program Files (x86)\HP\LoadRunner\bin\merc_uuid.dll
+0x75140000 - 0x7529c000 	C:\Windows\syswow64\ole32.dll
+0x2ff60000 - 0x2ff70000 	C:\Program Files (x86)\HP\LoadRunner\bin\msg_handler.dll
+0x33610000 - 0x336e9000 	C:\Program Files (x86)\HP\LoadRunner\bin\launcher.dll
+0x40bb0000 - 0x40bd8000 	C:\Program Files (x86)\HP\LoadRunner\bin\comm_util.dll
+0x33360000 - 0x3339b000 	C:\Program Files (x86)\HP\LoadRunner\bin\libgd.dll
+0x331a0000 - 0x331a9000 	C:\Program Files (x86)\HP\LoadRunner\bin\libpvc.dll
+0x33590000 - 0x335a2000 	C:\Program Files (x86)\HP\LoadRunner\bin\leader_election.dll
+0x30630000 - 0x3064f000 	C:\Program Files (x86)\HP\LoadRunner\bin\mlogger.dll
+0x30780000 - 0x30789000 	C:\Program Files (x86)\HP\LoadRunner\bin\mictime.dll
+0x33100000 - 0x3310d000 	C:\Program Files (x86)\HP\LoadRunner\bin\libtpq.dll
+0x337c0000 - 0x337c8000 	C:\Program Files (x86)\HP\LoadRunner\bin\key_storage.dll
+0x739f0000 - 0x73a07000 	C:\Windows\system32\USERENV.dll
+0x739e0000 - 0x739eb000 	C:\Windows\system32\profapi.dll
+0x2a920000 - 0x2a94d000 	C:\Program Files (x86)\HP\LoadRunner\bin\two_way_comm.dll
+0x2c170000 - 0x2c184000 	C:\Program Files (x86)\HP\LoadRunner\bin\security_protocols.dll
+0x2c190000 - 0x2c198000 	C:\Program Files (x86)\HP\LoadRunner\bin\security_encryption.dll
+0x313e0000 - 0x314ec000 	C:\Program Files (x86)\HP\LoadRunner\bin\lwc_cryptolib.dll
+0x337e0000 - 0x337e6000 	C:\Program Files (x86)\HP\LoadRunner\bin\key_handler.dll
+0x337d0000 - 0x337dc000 	C:\Program Files (x86)\HP\LoadRunner\bin\key_repository.dll
+0x73180000 - 0x731cc000 	C:\Windows\system32\apphelp.dll
+0x688b0000 - 0x6893d000 	C:\Windows\AppPatch\AcLayers.DLL
+0x76b50000 - 0x76bdf000 	C:\Windows\syswow64\OLEAUT32.dll
+0x735b0000 - 0x73601000 	C:\Windows\system32\WINSPOOL.DRV
+0x74c90000 - 0x74ca2000 	C:\Windows\system32\MPR.dll
+0x770e0000 - 0x77140000 	C:\Windows\system32\IMM32.DLL
+0x76be0000 - 0x76cac000 	C:\Windows\syswow64\MSCTF.dll
+0x412d0000 - 0x412e9000 	C:\Program Files (x86)\HP\LoadRunner\bin\bugslayerutil.dll
+0x3d0a0000 - 0x3d161000 	C:\Program Files (x86)\HP\LoadRunner\bin\dbghelp.dll
+0x73a10000 - 0x73a19000 	C:\Windows\system32\VERSION.dll
+0x763f0000 - 0x763f5000 	C:\Windows\syswow64\psapi.dll
+0x3dd30000 - 0x3dd37000 	C:\Program Files (x86)\HP\LoadRunner\bin\crash_handler_dlg.dll
+0x02a50000 - 0x02b5f000 	C:\Windows\WinSxS\x86_microsoft.vc80.mfc_1fc8b3b9a1e18e3b_8.0.50727.4053_none_cbf21254470d8752\MFC80U.DLL
+0x6ea60000 - 0x6ea6a000 	C:\Windows\WinSxS\x86_microsoft.vc80.mfcloc_1fc8b3b9a1e18e3b_8.0.50727.4053_none_03ca5532205cb096\MFC80CHS.DLL
+0x72390000 - 0x72410000 	C:\Windows\system32\uxtheme.dll
+0x76eb0000 - 0x76f33000 	C:\Windows\syswow64\CLBCatQ.DLL
+0x32730000 - 0x32741000 	C:\Program Files (x86)\HP\LoadRunner\bin\LRCrashHandler.dll
+0x68890000 - 0x688ab000 	C:\Windows\WinSxS\x86_microsoft.vc80.atl_1fc8b3b9a1e18e3b_8.0.50727.4053_none_d1c738ec43578ea1\ATL80.DLL
+0x319d0000 - 0x31a1f000 	C:\Program Files (x86)\HP\LoadRunner\bin\lrwreplaymain.dll
+0x29f60000 - 0x29f66000 	C:\Program Files (x86)\HP\LoadRunner\bin\VnpUtils.dll
+0x2ab60000 - 0x2ab8f000 	C:\Program Files (x86)\HP\LoadRunner\bin\trans.dll
+0x2aaf0000 - 0x2ab27000 	C:\Program Files (x86)\HP\LoadRunner\bin\trans_server.dll
+0x2ac20000 - 0x2ac2d000 	C:\Program Files (x86)\HP\LoadRunner\bin\timediff_ext.dll
+0x28a90000 - 0x28aae000 	C:\Program Files (x86)\HP\LoadRunner\bin\wrapzlib.dll
+0x33510000 - 0x3353d000 	C:\Program Files (x86)\HP\LoadRunner\bin\libdatatypes.dll
+0x3d1f0000 - 0x3d216000 	C:\Program Files (x86)\HP\LoadRunner\bin\data_types_ifs.dll
+0x338e0000 - 0x338ea000 	C:\Program Files (x86)\HP\LoadRunner\bin\jrequestor_srv.dll
+0x3d060000 - 0x3d06d000 	C:\Program Files (x86)\HP\LoadRunner\bin\dc_requests.dll
+0x29fd0000 - 0x29fdd000 	C:\Program Files (x86)\HP\LoadRunner\bin\vm.dll
+0x2f5b0000 - 0x2f5c8000 	C:\Program Files (x86)\HP\LoadRunner\bin\parameng.dll
+0x2c850000 - 0x2c85e000 	C:\Program Files (x86)\HP\LoadRunner\bin\run_time_context.dll
+0x2ca70000 - 0x2ca7e000 	C:\Program Files (x86)\HP\LoadRunner\bin\rtc_protocol.dll
+0x32070000 - 0x32087000 	C:\Program Files (x86)\HP\LoadRunner\bin\LRUN50.dll
+0x72bd0000 - 0x72bd7000 	C:\Windows\system32\WSOCK32.dll
+0x2c820000 - 0x2c83b000 	C:\Program Files (x86)\HP\LoadRunner\bin\runlogic.dll
+0x3c640000 - 0x3c64b000 	C:\Program Files (x86)\HP\LoadRunner\bin\faserver.dll
+0x28ab0000 - 0x28aba000 	C:\Program Files (x86)\HP\LoadRunner\bin\wrapicu.dll
+0x3a8b0000 - 0x3aa1a000 	C:\Program Files (x86)\HP\LoadRunner\bin\icuuc36.dll
+0x3ae60000 - 0x3b812000 	C:\Program Files (x86)\HP\LoadRunner\bin\icudt36.dll
+0x33970000 - 0x3397a000 	C:\Program Files (x86)\HP\LoadRunner\bin\jconv_str.dll
+0x2f440000 - 0x2f459000 	C:\Program Files (x86)\HP\LoadRunner\bin\PathResolver.dll
+0x3d1a0000 - 0x3d1b8000 	C:\Program Files (x86)\HP\LoadRunner\bin\DataFormatsEngine.dll
+0x3c660000 - 0x3c67d000 	C:\Program Files (x86)\HP\LoadRunner\bin\ExtInfra.dll
+0x31750000 - 0x31791000 	C:\Program Files (x86)\HP\LoadRunner\bin\LrwUtil.dll
+0x30fc0000 - 0x30fd1000 	C:\Program Files (x86)\HP\LoadRunner\bin\mic_regex.dll
+0x333b0000 - 0x3345c000 	C:\Program Files (x86)\HP\LoadRunner\bin\LIBEAY32_MIC.dll
+0x31c60000 - 0x31c92000 	C:\Program Files (x86)\HP\LoadRunner\bin\LrwiWebInfra.dll
+0x3c0d0000 - 0x3c0dd000 	C:\Program Files (x86)\HP\LoadRunner\bin\http_auth.dll
+0x3c030000 - 0x3c03c000 	C:\Program Files (x86)\HP\LoadRunner\bin\HttpUtils.dll
+0x31710000 - 0x31727000 	C:\Program Files (x86)\HP\LoadRunner\bin\LrXml.dll
+0x284e0000 - 0x286ef000 	C:\Program Files (x86)\HP\LoadRunner\bin\Xalan-C_1_10Mic.dll
+0x27f50000 - 0x28162000 	C:\Program Files (x86)\HP\LoadRunner\bin\xerces-c_2_7.dll
+0x284d0000 - 0x284d7000 	C:\Program Files (x86)\HP\LoadRunner\bin\XalanMessages_1_10.dll
+0x3ac10000 - 0x3ad98000 	C:\Program Files (x86)\HP\LoadRunner\bin\icuin36.dll
+0x29f70000 - 0x29f8a000 	C:\Program Files (x86)\HP\LoadRunner\bin\VnpReport.dll
+0x27eb0000 - 0x27ed6000 	C:\Program Files (x86)\HP\LoadRunner\bin\XmlParserInterface.dll
+0x319c0000 - 0x319cb000 	C:\Program Files (x86)\HP\LoadRunner\bin\LrwReport.dll
+0x31f60000 - 0x31f82000 	C:\Program Files (x86)\HP\LoadRunner\bin\LrwCs.dll
+0x31c30000 - 0x31c55000 	C:\Program Files (x86)\HP\LoadRunner\bin\LrwJsw.dll
+0x33860000 - 0x338d8000 	C:\Program Files (x86)\HP\LoadRunner\bin\JScriptEngine.dll
+0x31a20000 - 0x31b6d000 	C:\Program Files (x86)\HP\LoadRunner\bin\LrwObjMgr.dll
+0x31cc0000 - 0x31cce000 	C:\Program Files (x86)\HP\LoadRunner\bin\LrwiHtmlParser.dll
+0x31bf0000 - 0x31c28000 	C:\Program Files (x86)\HP\LoadRunner\bin\LrwLogicMgr.dll
+0x318e0000 - 0x318eb000 	C:\Program Files (x86)\HP\LoadRunner\bin\LrwSnapshotsWriter.dll
+0x3c040000 - 0x3c06e000 	C:\Program Files (x86)\HP\LoadRunner\bin\HTTPSnapshotsWrapper.dll
+0x6ea70000 - 0x6eaba000 	C:\Windows\SYSTEM32\MSCOREE.DLL
+0x58240000 - 0x582bd000 	C:\Windows\WinSxS\x86_microsoft.vc80.crt_1fc8b3b9a1e18e3b_8.0.50727.4940_none_d08cc06a442b34fc\msvcm80.dll
+0x29050000 - 0x29057000 	C:\Program Files (x86)\HP\LoadRunner\bin\WebSnapshotsCommon.dll
+0x317f0000 - 0x3184b000 	C:\Program Files (x86)\HP\LoadRunner\bin\LrwSrvNet.dll
+
+VM Arguments:
+jvm_args: vfprintf exit abort -Djava.security.policy=c:\program files (x86)\hp\loadrunner\classes\security\recorder.policy 
+java_command: <unknown>
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=C:\Program Files (x86)\Java\jdk1.6.0_45
+CLASSPATH=D:\LR_Script\LR_JAVA_SysOrder\SysOrder\;c:\program files (x86)\hp\loadrunner\classes\srv;c:\program files (x86)\hp\loadrunner\classes;.;C:\Program Files (x86)\Java\jdk1.6.0_45\bin;C:\Program Files (x86)\Java\jdk1.6.0_45\lib\dt.jar;C:\Program Files (x86)\Java\jdk1.6.0_45\lib\tools.jar;C:\Program Files (x86)\HP\LoadRunner\classes\lr_http.jar;C:\Program Files (x86)\HP\LoadRunner\classes\yidao_getSign.jar;;;;c:\program files (x86)\hp\loadrunner\lib\xstream-1.3.jar;c:\program files (x86)\hp\loadrunner\lib\xpp3-1.1.4c.jar
+PATH=C:\Program Files (x86)\Java\jdk1.6.0_45\jre\bin\client;C:\PROGRA~2\HP\LOADRU~1\bin;C:\PROGRA~2\HP\LOADRU~1\bin\gecko;C:\PROGRA~2\HP\LOADRU~1\bin\tulip\bin;C:\Program Files (x86)\Java\jdk1.6.0_45\bin;C:\Program Files (x86)\Java\jdk1.6.0_45\jre\bin;C:\Windows/system32;C:\Windows;D:\SoftWare\Eclipse_20160408\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\bin;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\apache-maven-3.3.9\bin;C:\Program Files\TortoiseGit\bin;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\Program Files (x86)\Java\jdk1.6.0_45\bin;C:\Program Files (x86)\Java\jdk1.6.0_45\jre\bin;C:\Windows/system32;C:\Windows;D:\SoftWare\Eclipse_20160408\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\bin;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\apache-maven-3.3.9\bin;
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 78 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 78 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 4088416k(828928k free), swap 8366104k(2737828k free)
+
+vm_info: Java HotSpot(TM) Client VM (20.45-b01) for windows-x86 JRE (1.6.0_45-b06), built on Mar 26 2013 13:40:03 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Mon Mar 13 16:58:31 2017
+elapsed time: 0 seconds
+

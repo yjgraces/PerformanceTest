@@ -1,0 +1,3 @@
+[Hosts]
+localhost=d:\lr_script\lr_java_sysorder\sysorder\res1724\localhost_1.eve
+10.0.11.53=/tmp/brr_eYMwKd/netdir/d/lr_script/lr_java_sysorder/sysorder/res1724/10.0.11.53_4.eve

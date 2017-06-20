@@ -1,0 +1,2 @@
+[Hosts]
+localhost=D:\LR_Script\LR_JAVA_SysOrder\SysOrder\res\localhost_1.eve

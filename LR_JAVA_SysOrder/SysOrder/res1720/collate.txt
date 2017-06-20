@@ -1,0 +1,7 @@
+[Diagnostics]
+Status=-1
+[Collate Recovery]
+Scenario=C:\Users\Administrator\Desktop\java-lr.lrs
+Completed=0
+[Hosts]
+10.0.11.53=/tmp/brr_PRtWHK/netdir/d/lr_script/lr_java_sysorder/sysorder/res1720/10.0.11.53_1.eve

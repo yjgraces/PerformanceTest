@@ -1,0 +1,167 @@
+Virtual User Script started at : 2017-03-13 17:12:20
+Starting action vuser_init.
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Actions.
+web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+System.out: D:\LR_Script\LR_JAVA_SysOrder\SysOrder\getestimatedcost.txt                                                                                                                                                      Notify:
+Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+web_add_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+web_add_header("sign") was successful  	[MsgId: MMSG-26392]
+Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Notify: Transaction "订单预估OrderEstimated" started.
+HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://ycagent.yongche.com/order/estimate?start_latitude=38.77108&city=hlbe&time_length=1800&start_longitude=82.68952&passenger_phone=16801234527&nonce=1489396340&end_longitude=82.68265&end_latitude=38.77948&start_time=1489396340&car_type_id=3&in_coord_type=baidu&product_type_id=1&is_asap=1"  	[MsgId: MMSG-26548]
+Registered web_reg_find successful for "Text="ret_code":200" (count=1)  	[MsgId: MMSG-26364]
+web_custom_request("yidao_orderEstimated") was successful, 1196 body bytes, 287 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Notify: Transaction "订单预估OrderEstimated" ended with "Pass" status (Duration: 0.1734 Wasted Time: 0.0000).
+System.out: D:\LR_Script\LR_JAVA_SysOrder\SysOrder\createorder.txt                                                                                                                                                      Notify:
+System.out: {estimate_distance=, estimate_info=, coupon_member=, area_code=, is_support_system_decision=1, city=hlbe, from_pos=testaddr, to_pos=testaddr, driver_id=, order_lat=36.90444, passenger_name=testY, estimate_time=, product_type_id=1, end_lat=36.90222, favor_front_seat=, is_need_manual_dispatch=0, start_address=testaddr, favor_chat=, end_address=testaddr, order_port=, flight_data_id=, favor_slow=, flight_number=, corporate_id=0, passenger_sms=0, ip=, start_lng=100.15211, corporate_dept_id=0, has_custom_decision=0, source=20000001, passenger_phone=13391951392, favor_emergency_light=, favor_air_condition=, favor_fm=, favor_aromatherapy=, end_lng=100.15222, start_time=1483082047, in_coord_type=baidu, car_type_id=3, favor_no_call=, order_lng=100.15333, start_lat=36.90211, is_asap=1}                                                                                                                                                      Notify:
+System.out: {estimate_distance=, estimate_info=, coupon_member=, area_code=, is_support_system_decision=1, city=hlbe, from_pos=testaddr, to_pos=testaddr, driver_id=, order_lat=38.77963, passenger_name=testY, estimate_time=, product_type_id=1, end_lat=38.77042, favor_front_seat=, is_need_manual_dispatch=0, start_address=testaddr, favor_chat=, end_address=testaddr, order_port=, flight_data_id=, favor_slow=, flight_number=, corporate_id=0, passenger_sms=0, ip=, start_lng=82.68132, corporate_dept_id=0, has_custom_decision=0, source=20000001, passenger_phone=13391951392, nonce=1489396340, favor_emergency_light=, favor_air_condition=, favor_fm=, favor_aromatherapy=, end_lng=82.68622, start_time=1489396340, in_coord_type=baidu, car_type_id=3, favor_no_call=, order_lng=82.68560, start_lat=38.77739, is_asap=1}                                                                                                                                                      Notify:
+Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+web_add_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+web_add_header("sign") was successful  	[MsgId: MMSG-26392]
+Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Notify: Transaction "创建系统决策订单createSysOrder" started.
+HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://ycagent.yongche.com/order"  	[MsgId: MMSG-26548]
+Registered web_reg_find successful for "Text=order_id" (count=1)  	[MsgId: MMSG-26364]
+web_custom_request("yidao_creatOrder") was successful, 181 body bytes, 184 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Notify: Transaction "创建系统决策订单createSysOrder" ended with "Pass" status (Duration: 0.2023 Wasted Time: 0.0000).
+System.out: 创建订单成功，id:6396908633245925146                                                                                                                                                      Notify:
+Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+web_add_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+web_add_header("sign") was successful  	[MsgId: MMSG-26392]
+lr_think_time: 1.00 seconds.
+Notify: Transaction "获取订单状态getOrderStatus" started.
+HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://ycagent.yongche.com/order/status?nonce=1489396340&order_id=6396908633245925146"  	[MsgId: MMSG-26548]
+Registered web_reg_find successful for "Text="status":"4" (count=1)  	[MsgId: MMSG-26364]
+web_custom_request("yidao_getOrderStatus") was successful, 139 body bytes, 184 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Notify: Transaction "获取订单状态getOrderStatus" ended with "Pass" status (Duration: 0.0912 Wasted Time: 0.0000).
+Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+web_add_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+web_add_header("sign") was successful  	[MsgId: MMSG-26392]
+Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Notify: Transaction "取消订单cancelOrder" started.
+HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://ycagent.yongche.com/order/cancel"  	[MsgId: MMSG-26548]
+Registered web_reg_find successful for "Text="ret_code":200" (count=2)  	[MsgId: MMSG-26364]
+web_custom_request("yidao_cancelOrder") was successful, 75 body bytes, 184 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Notify: Transaction "取消订单cancelOrder" ended with "Pass" status (Duration: 0.1098 Wasted Time: 0.0000).
+Ending action Actions.
+Ending iteration 1.
+Starting iteration 2.
+Starting action Actions.
+web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+System.out: D:\LR_Script\LR_JAVA_SysOrder\SysOrder\getestimatedcost.txt                                                                                                                                                      Notify:
+Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+web_add_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+web_add_header("sign") was successful  	[MsgId: MMSG-26392]
+Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Notify: Transaction "订单预估OrderEstimated" started.
+HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://ycagent.yongche.com/order/estimate?start_latitude=38.77525&city=hlbe&time_length=1800&start_longitude=82.68864&passenger_phone=16801050761&nonce=1489396342&end_longitude=82.68279&end_latitude=38.77922&start_time=1489396342&car_type_id=3&in_coord_type=baidu&product_type_id=1&is_asap=1"  	[MsgId: MMSG-26548]
+Registered web_reg_find successful for "Text="ret_code":200" (count=1)  	[MsgId: MMSG-26364]
+web_custom_request("yidao_orderEstimated") was successful, 1196 body bytes, 287 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Notify: Transaction "订单预估OrderEstimated" ended with "Pass" status (Duration: 0.1643 Wasted Time: 0.0000).
+System.out: D:\LR_Script\LR_JAVA_SysOrder\SysOrder\createorder.txt                                                                                                                                                      Notify:
+System.out: {estimate_distance=, estimate_info=, coupon_member=, area_code=, is_support_system_decision=1, city=hlbe, from_pos=testaddr, to_pos=testaddr, driver_id=, order_lat=36.90444, passenger_name=testY, estimate_time=, product_type_id=1, end_lat=36.90222, favor_front_seat=, is_need_manual_dispatch=0, start_address=testaddr, favor_chat=, end_address=testaddr, order_port=, flight_data_id=, favor_slow=, flight_number=, corporate_id=0, passenger_sms=0, ip=, start_lng=100.15211, corporate_dept_id=0, has_custom_decision=0, source=20000001, passenger_phone=13391951392, favor_emergency_light=, favor_air_condition=, favor_fm=, favor_aromatherapy=, end_lng=100.15222, start_time=1483082047, in_coord_type=baidu, car_type_id=3, favor_no_call=, order_lng=100.15333, start_lat=36.90211, is_asap=1}                                                                                                                                                      Notify:
+System.out: {estimate_distance=, estimate_info=, coupon_member=, area_code=, is_support_system_decision=1, city=hlbe, from_pos=testaddr, to_pos=testaddr, driver_id=, order_lat=38.77107, passenger_name=testY, estimate_time=, product_type_id=1, end_lat=38.77286, favor_front_seat=, is_need_manual_dispatch=0, start_address=testaddr, favor_chat=, end_address=testaddr, order_port=, flight_data_id=, favor_slow=, flight_number=, corporate_id=0, passenger_sms=0, ip=, start_lng=82.68026, corporate_dept_id=0, has_custom_decision=0, source=20000001, passenger_phone=13391951392, nonce=1489396342, favor_emergency_light=, favor_air_condition=, favor_fm=, favor_aromatherapy=, end_lng=82.68371, start_time=1489396342, in_coord_type=baidu, car_type_id=3, favor_no_call=, order_lng=82.68982, start_lat=38.77137, is_asap=1}                                                                                                                                                      Notify:
+Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+web_add_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+web_add_header("sign") was successful  	[MsgId: MMSG-26392]
+Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Notify: Transaction "创建系统决策订单createSysOrder" started.
+HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://ycagent.yongche.com/order"  	[MsgId: MMSG-26548]
+Registered web_reg_find successful for "Text=order_id" (count=1)  	[MsgId: MMSG-26364]
+web_custom_request("yidao_creatOrder") was successful, 181 body bytes, 184 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Notify: Transaction "创建系统决策订单createSysOrder" ended with "Pass" status (Duration: 0.1846 Wasted Time: 0.0000).
+System.out: 创建订单成功，id:6396908641835482913                                                                                                                                                      Notify:
+Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+web_add_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+web_add_header("sign") was successful  	[MsgId: MMSG-26392]
+lr_think_time: 1.00 seconds.
+Notify: Transaction "获取订单状态getOrderStatus" started.
+HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://ycagent.yongche.com/order/status?nonce=1489396342&order_id=6396908641835482913"  	[MsgId: MMSG-26548]
+Registered web_reg_find successful for "Text="status":"4" (count=1)  	[MsgId: MMSG-26364]
+web_custom_request("yidao_getOrderStatus") was successful, 140 body bytes, 184 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Notify: Transaction "获取订单状态getOrderStatus" ended with "Pass" status (Duration: 0.0383 Wasted Time: 0.0000).
+Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+web_add_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+web_add_header("sign") was successful  	[MsgId: MMSG-26392]
+Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Notify: Transaction "取消订单cancelOrder" started.
+HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://ycagent.yongche.com/order/cancel"  	[MsgId: MMSG-26548]
+Registered web_reg_find successful for "Text="ret_code":200" (count=2)  	[MsgId: MMSG-26364]
+web_custom_request("yidao_cancelOrder") was successful, 75 body bytes, 184 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Notify: Transaction "取消订单cancelOrder" ended with "Pass" status (Duration: 0.0922 Wasted Time: 0.0000).
+Ending action Actions.
+Ending iteration 2.
+Starting iteration 3.
+Starting action Actions.
+web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+System.out: D:\LR_Script\LR_JAVA_SysOrder\SysOrder\getestimatedcost.txt                                                                                                                                                      Notify:
+Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+web_add_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+web_add_header("sign") was successful  	[MsgId: MMSG-26392]
+Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Notify: Transaction "订单预估OrderEstimated" started.
+HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://ycagent.yongche.com/order/estimate?start_latitude=38.77656&city=hlbe&time_length=1800&start_longitude=82.68743&passenger_phone=16801050761&nonce=1489396344&end_longitude=82.68742&end_latitude=38.77952&start_time=1489396344&car_type_id=3&in_coord_type=baidu&product_type_id=1&is_asap=1"  	[MsgId: MMSG-26548]
+Registered web_reg_find successful for "Text="ret_code":200" (count=1)  	[MsgId: MMSG-26364]
+web_custom_request("yidao_orderEstimated") was successful, 1196 body bytes, 287 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Notify: Transaction "订单预估OrderEstimated" ended with "Pass" status (Duration: 0.2311 Wasted Time: 0.0000).
+System.out: D:\LR_Script\LR_JAVA_SysOrder\SysOrder\createorder.txt                                                                                                                                                      Notify:
+System.out: {estimate_distance=, estimate_info=, coupon_member=, area_code=, is_support_system_decision=1, city=hlbe, from_pos=testaddr, to_pos=testaddr, driver_id=, order_lat=36.90444, passenger_name=testY, estimate_time=, product_type_id=1, end_lat=36.90222, favor_front_seat=, is_need_manual_dispatch=0, start_address=testaddr, favor_chat=, end_address=testaddr, order_port=, flight_data_id=, favor_slow=, flight_number=, corporate_id=0, passenger_sms=0, ip=, start_lng=100.15211, corporate_dept_id=0, has_custom_decision=0, source=20000001, passenger_phone=13391951392, favor_emergency_light=, favor_air_condition=, favor_fm=, favor_aromatherapy=, end_lng=100.15222, start_time=1483082047, in_coord_type=baidu, car_type_id=3, favor_no_call=, order_lng=100.15333, start_lat=36.90211, is_asap=1}                                                                                                                                                      Notify:
+System.out: {estimate_distance=, estimate_info=, coupon_member=, area_code=, is_support_system_decision=1, city=hlbe, from_pos=testaddr, to_pos=testaddr, driver_id=, order_lat=38.77696, passenger_name=testY, estimate_time=, product_type_id=1, end_lat=38.77266, favor_front_seat=, is_need_manual_dispatch=0, start_address=testaddr, favor_chat=, end_address=testaddr, order_port=, flight_data_id=, favor_slow=, flight_number=, corporate_id=0, passenger_sms=0, ip=, start_lng=82.68604, corporate_dept_id=0, has_custom_decision=0, source=20000001, passenger_phone=13391951392, nonce=1489396344, favor_emergency_light=, favor_air_condition=, favor_fm=, favor_aromatherapy=, end_lng=82.68667, start_time=1489396344, in_coord_type=baidu, car_type_id=3, favor_no_call=, order_lng=82.68673, start_lat=38.77920, is_asap=1}                                                                                                                                                      Notify:
+Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+web_add_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+web_add_header("sign") was successful  	[MsgId: MMSG-26392]
+Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Notify: Transaction "创建系统决策订单createSysOrder" started.
+HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://ycagent.yongche.com/order"  	[MsgId: MMSG-26548]
+Registered web_reg_find successful for "Text=order_id" (count=1)  	[MsgId: MMSG-26364]
+web_custom_request("yidao_creatOrder") was successful, 181 body bytes, 184 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Notify: Transaction "创建系统决策订单createSysOrder" ended with "Pass" status (Duration: 0.1946 Wasted Time: 0.0000).
+System.out: 创建订单成功，id:6396908650425417509                                                                                                                                                      Notify:
+Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+web_add_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+web_add_header("sign") was successful  	[MsgId: MMSG-26392]
+lr_think_time: 1.00 seconds.
+Notify: Transaction "获取订单状态getOrderStatus" started.
+HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://ycagent.yongche.com/order/status?nonce=1489396344&order_id=6396908650425417509"  	[MsgId: MMSG-26548]
+Registered web_reg_find successful for "Text="status":"4" (count=1)  	[MsgId: MMSG-26364]
+web_custom_request("yidao_getOrderStatus") was successful, 140 body bytes, 184 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Notify: Transaction "获取订单状态getOrderStatus" ended with "Pass" status (Duration: 0.0503 Wasted Time: 0.0000).
+Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
+web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
+web_add_header("User-Agent") was successful  	[MsgId: MMSG-26392]
+web_add_header("sign") was successful  	[MsgId: MMSG-26392]
+Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Notify: Transaction "取消订单cancelOrder" started.
+HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://ycagent.yongche.com/order/cancel"  	[MsgId: MMSG-26548]
+Registered web_reg_find successful for "Text="ret_code":200" (count=2)  	[MsgId: MMSG-26364]
+web_custom_request("yidao_cancelOrder") was successful, 75 body bytes, 184 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Notify: Transaction "取消订单cancelOrder" ended with "Pass" status (Duration: 0.0819 Wasted Time: 0.0000).
+Ending action Actions.
+Ending iteration 3.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

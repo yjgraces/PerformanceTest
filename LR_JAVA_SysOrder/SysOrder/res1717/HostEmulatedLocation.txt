@@ -1,0 +1,6 @@
+[No WAN Emulation]
+HostsCount=4
+Host0=10.0.11.54
+Host1=10.0.11.222
+Host2=localhost
+Host3=10.0.11.53
